@@ -6,6 +6,6 @@ export default function content(req, res) {
     .json({
       component: 'header',
       tagline: 'Hello World!',
-      array: [{ component: 'header',tagline:'test 1' }, { component: 'hero', tagline:'test 2 }]
+      array: [{ component: 'header',tagline:'test 1' }, { component: 'hero', tagline:'test 2' }]
     });
 }
