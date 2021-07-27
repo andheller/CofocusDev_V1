@@ -9,7 +9,7 @@ function Home({ components }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('/api/content');
+  const res = await fetch('https://cofocus-dev-v1.vercel.app/api/content');
   const json = await res.json();
 
   return {
