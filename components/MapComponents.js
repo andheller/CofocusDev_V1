@@ -5,11 +5,11 @@ import Header from '../components/Header';
 function MapComponents({ arr }) {
   return arr.map(item =>
     item.component == 'Feature1' ? (
-      <Feature1 />
+      <Feature1 obj={item}/>
     ) : item.component == 'hero' ? (
-      <Hero />
+      <Hero obj={item}/>
     ) : item.component == 'header' ? (
-      <Header />
+      <Header obj={item}/>
     ) : (
       <div className="text-center mt-20 text-6xl">
         <h1>No luck, try again!</h1>

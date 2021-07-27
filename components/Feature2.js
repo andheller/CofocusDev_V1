@@ -43,13 +43,13 @@ const features = [
   }
 ];
 
-export default function Feature2() {
+export default function Feature2({obj}) {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900">
-            Default Response
+          <h2 className={obj.taglineClassName}>
+            {obj.tagline}
           </h2>
           <p className="mt-4 text-lg text-gray-500">
             Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
