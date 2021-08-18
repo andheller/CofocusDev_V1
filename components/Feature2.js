@@ -4,7 +4,7 @@ const features = [
   {
     name: 'Default team members',
     description:
-      'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.'
+      '<b>Tempor</b> tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.'
   },
   {
     name: 'Notifications',
@@ -43,14 +43,19 @@ const features = [
   }
 ];
 
+
+
 export default function Feature2({obj}) {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-8xl text-green-900">HELLO WORLD</h1>
           <h2 className={obj.taglineClassName}>
             {obj.tagline}
           </h2>
+          
+          <p>Test</p>
           <p className="mt-4 text-lg text-gray-500">
             Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
             Malesuada adipiscing sagittis vel nulla nec.
@@ -64,7 +69,7 @@ export default function Feature2({obj}) {
                   {feature.name}
                 </p>
               </dt>
-              <dd className="mt-2 ml-9 text-base text-gray-500">
+              <dd className="mt-2 ml-9 text-base text-red-500">
                 {feature.description}
               </dd>
             </div>

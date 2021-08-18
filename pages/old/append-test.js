@@ -1,14 +1,8 @@
-import MapComponents from '../components/MapComponents2';
 import Feature1 from '../components/Feature1';
+import { useState } from 'react'
 
-function activateLasers(e) {
-    e.preventDefault();
-    let target = document.getElementById('target');
-    let addMe = mapComponents.Feature1
-    target.append(addMe)
-    console.log(addMe)
-  }
 
+   
   const mapComponents = {
     //'Hero':(item) =><Hero obj={item}/>,
     //'Header':(item) =><Header obj={item}/>,
@@ -18,13 +12,28 @@ function activateLasers(e) {
   }
 
 
+
 function Home({ components }) {
+  const [jstate, setJstate] = useState(['hi', 'hi', <Feature1 />, <Feature1 />])
+  //const [count, setCount] = useState(0);
+  const child =[mapComponents.Feature1]
+
   return (
     <>    
+    {/*
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    */}
       <div className="h-16 flex flex-wrap content-center min-w-full">
-        <button onClick={activateLasers} className = "bg-indigo-500 px-4 py-1 m-auto -m-0" >Add Component</button></div>
-      <div id="target"></div>
-      <MapComponents arr={components} />
+        <button onClick={() => setJstate(jstate.push('hi'))} className = "bg-indigo-500 px-4 py-1 m-auto -m-0" >Add Component</button></div>
+        
+        <div>{
+        jstate.map(item =><div>{item}</div>)
+          }
+          
+        </div>
     </>
   );
 }
